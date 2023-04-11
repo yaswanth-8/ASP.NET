@@ -1,0 +1,73 @@
+﻿@page
+@model WebApp.Pages.Books.CreateBookModel
+@{
+}
+
+<p>
+   Create Book
+</p>
+<div>
+    <p>
+       @Model.message
+    </p>
+</div>
+<form method="post">
+    <div class="row mb-2">
+        <label class="col-sm-8 col-form-label" for="id">Book Id</label>
+        <div class="col-sm-5">
+            <input type="text" class="form-control" name="id" id="id" required />
+        </div>
+    </div>
+    <div class="row mb-2">
+        <label class="col-sm-8 col-form-label" for="name">Name</label>
+        <div class="col-sm-5">
+            <input type="text" class="form-control" name="name" id="name" required />
+        </div>
+    </div>
+    <div class="row mb-2">
+        <label class="col-sm-8 col-form-label" for="cate">Category</label>
+        <div class="col-sm-5">
+            <input type="text" class="form-control" name="category" id="cate" required/>
+        </div>
+    </div>
+    <div class="row mb-2">
+        <label class="col-sm-8 col-form-label" for="auth">Author</label>
+        <div class="col-sm-5">
+            <input type="text" class="form-control" name="author" id="auth" required />
+        </div>
+    </div>
+    <div class="row mb-2">
+        <label class="col-sm-8 col-form-label" for="publ">Publication</label>
+        <div class="col-sm-5">
+            <input type="text" class="form-control" name="publication" id="publ" required/>
+        </div>
+    </div>
+    <div class="row mb-2">
+        <label class="col-sm-8 col-form-label" for="date">Date</label>
+        <div class="col-sm-5">
+            <input type="date" class="form-control" name="publishDate" id="date" required/>
+        </div>
+    </div>
+    <div class="row mb-2">
+        <label class="col-sm-8 col-form-label" for="ed">BookEd</label>
+        <div class="col-sm-5">
+            <input type="number" class="form-control" name="bookEdition" id="ed" required/>
+        </div>
+    </div>
+    <div class="row mb-2">
+        <label class="col-sm-8 col-form-label" for="price">Price</label>
+        <div class="col-sm-5">
+            <input type="text" class="form-control" name="price" id="price" required/>
+        </div>
+    </div>
+    <div>
+        <button class="btn btn-success" type="submit">
+           
+            SUBMIT
+           
+            </button>
+    </div>
+</form>
+<div class="mt-5">
+<a class="btn btn-danger" href="./IndexBook">Cancel</a>
+</div>

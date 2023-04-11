@@ -1,0 +1,40 @@
+﻿@page
+@model WebApp.Pages.Books.UpdateBookModel
+@{
+}
+
+<p>In update book</p>
+<form method="post">
+    <input type="hidden" name="BookCode" value="@Model.book.Id" />
+    <div class="row mb-2">
+        <label class="col-sm-8 col-form-label" for="name">Name</label>
+        <div class="col-sm-5">
+            <input type="text" class="form-control" name="name" id="name" value="@Model.book.BookName" required />
+        </div>
+    </div>
+    <div class="row mb-2">
+        <label class="col-sm-8 col-form-label" for="price">Price</label>
+        <div class="col-sm-5">
+            <input type="text" class="form-control" name="price" id="price" value="@Model.book.Price" required/>
+        </div>
+    </div>
+    <div class="row mb-2">
+        <label class="col-sm-8 col-form-label" for="auth">Author</label>
+        <div class="col-sm-5">
+            <input type="text" class="form-control" name="author" id="auth" value="@Model.book.Author" required />
+        </div>
+    </div>
+    <div class="row mb-2">
+        <label class="col-sm-8 col-form-label" for="publ">Publication</label>
+        <div class="col-sm-5">
+            <input type="text" class="form-control" name="publication" id="publ" value="@Model.book.Publication" required/>
+        </div>
+    </div>
+    <div class="row mb-2">
+        <label class="col-sm-8 col-form-label" for="date">Date</label>
+        <div class="col-sm-5">
+            <input type="date" class="form-control" name="publishDate" value="@Model.book.Publish_Date.ToString("yyyy-MM-dd")" id="date" required/>
+        </div>
+    </div>
+    <button class="btn btn-success" type="submit">Submit</button>
+</form>
