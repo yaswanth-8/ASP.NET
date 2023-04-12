@@ -15,9 +15,10 @@ namespace WebApp.Pages.Books
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string query = "SELECT BOOK_CODE,BOOK_TITLE,AUTHOR,PUBLICATION,PRICE FROM LMS_BOOK_DETAILS";
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    
+                    using (SqlCommand command = new SqlCommand("ShowBook", connection))
                     {
+                        command.CommandType = System.Data.CommandType.StoredProcedure;
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
                             while (reader.Read())
